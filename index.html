@@ -186,6 +186,32 @@
                             <button type="submit" class="btn btn-primary btn-block">إرسال</button>
                         </div>
                     </form>
+                    <form id="rsvpForm">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">الاسم</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="sr-only">رقم الهاتف</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendance" class="sr-only">هل ستحضر؟</label>
+                            <select class="form-control" id="attendance" name="attendance" required>
+                                <option value="">هل ستحضر؟</option>
+                                <option value="yes">نعم، سأحضر</option>
+                                <option value="no">لا، لن أتمكن من الحضور</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments" class="sr-only">أي تعليقات</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="تعليق للعروس والعريس"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">إرسال</button>
+                        </div>
+                        <div id="responseMessage" style="display: none; margin-top: 15px; padding: 10px; border-radius: 4px;"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -211,6 +237,73 @@
             year: 2025,
             month: 8, 
             day: 6
+        });
+        
+        // RSVP Form Submission
+        document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const responseMessage = document.getElementById('responseMessage');
+            const formData = new FormData(this);
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'جاري الإرسال...';
+            responseMessage.style.display = 'none';
+            
+            // Prepare data for API
+            const guestData = {
+                action: "add_guest",
+                table_name: "ABCD120725", // You can change this to your actual table name
+                guest: {
+                    name: formData.get('name'),
+                    phonenumber: formData.get('phone'),
+                    attendingstatus: formData.get('attendance'),
+                    comments: formData.get('comments') || ''
+                }
+            };
+            
+            try {
+                const response = await fetch('https://api.eventofolio.com/guests', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(guestData)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    
+                    // Show success message
+                    responseMessage.style.display = 'block';
+                    responseMessage.style.backgroundColor = '#d4edda';
+                    responseMessage.style.color = '#155724';
+                    responseMessage.style.border = '1px solid #c3e6cb';
+                    responseMessage.textContent = 'تم إرسال ردكم بنجاح! شكراً لكم.';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                } else {
+                    throw new Error('فشل في إرسال البيانات');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                
+                // Show error message
+                responseMessage.style.display = 'block';
+                responseMessage.style.backgroundColor = '#f8d7da';
+                responseMessage.style.color = '#721c24';
+                responseMessage.style.border = '1px solid #f5c6cb';
+                responseMessage.textContent = 'حدث خطأ في إرسال البيانات. يرجى المحاولة مرة أخرى.';
+            }
+            
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'إرسال';
         });
     </script>
 
