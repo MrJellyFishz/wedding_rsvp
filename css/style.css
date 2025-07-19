@@ -43,13 +43,13 @@ body {
 }
 
 a {
-  color: #c1965f;
+  color: #f2458e;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #c1965f;
+  color: #f2458e;
   outline: none;
   text-decoration: none;
 }
@@ -67,17 +67,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #c1965f;
+  background: #f2458e;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #c1965f;
+  background: #f2458e;
 }
 
 ::selection {
   color: #fff;
-  background: #c1965f;
+  background: #f2458e;
 }
 
 .fh5co-nav {
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #c1965f;
+  color: #f2458e;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
@@ -778,7 +778,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-social-icons li a {
   display: inline-block;
   zoom: 1;
-  color: #c1965f;
+  color: #f2458e;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -797,7 +797,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
 }
 .fh5co-contact-info ul li:before {
-  color: #c1965f;
+  color: #f2458e;
   position: absolute;
   left: 0;
   top: .05em;
@@ -891,7 +891,7 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #c1965f;
+  color: #f2458e;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -954,7 +954,7 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(193, 150, 95, 0.8);
+  background: rgba(242, 69, 142, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1095,7 +1095,7 @@ form label {
   font-size: 20px;
   background: #fff;
   padding: 20px;
-  color: #c1965f;
+  color: #f2458e;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1122,7 +1122,7 @@ form label {
 }
 .couple-half h3 {
 	font-family: "Sacramento", Arial, serif;
-	color: #c1965f;
+	color: #f2458e;
 	font-size: 30px;
 	transition: color 0.3s ease;
 }
@@ -1228,7 +1228,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #c1965f;
+  color: #f2458e;
 }
 .feature-center p, .feature-center h3 {
   margin-bottom: 30px;
@@ -1250,7 +1250,7 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #c1965f;
+  color: #f2458e;
   font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1285,7 +1285,7 @@ form label {
   display: block;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #c1965f;
+  color: #f2458e;
   font-weight: 300;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
@@ -1375,7 +1375,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #c1965f;
+  color: #f2458e;
 }
 .feature-left .feature-copy {
   float: left;
@@ -1400,7 +1400,7 @@ form label {
 }
 
 #fh5co-started .fh5co-heading h2 {
-  color: #c1965f;
+  color: #f2458e;
 }
 #fh5co-started .fh5co-heading p {
   color: #828282;
@@ -1436,12 +1436,12 @@ form label {
 }
 #fh5co-started .form-control:focus {
   background-color: #fff;
-  border-color: #c1965f;
+  border-color: #f2458e;
 }
 #fh5co-started .btn {
   height: auto;
   border: none !important;
-  background: #c1965f;
+  background: #f2458e;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1452,7 +1452,7 @@ form label {
   transition: background-color 0.3s ease;
 }
 #fh5co-started .btn:hover {
-    background: #a87b47;
+    background: #f2458e;
 }
 
 #fh5co-started .form-inline .form-group {
@@ -1470,7 +1470,7 @@ form label {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23c1965f' viewBox='0 0 24 24'%3e%3cpath d='M7 10l5 5 5-5H7z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23f2458e' viewBox='0 0 24 24'%3e%3cpath d='M7 10l5 5 5-5H7z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1.2em 1.2em;
@@ -1510,7 +1510,7 @@ form label {
 }
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #c1965f;
+  border: 2px solid #f2458e;
 }
 
 .uppercase {
@@ -1585,21 +1585,21 @@ form label {
 }
 
 .btn-primary {
-  background: #c1965f;
+  background: #f2458e;
   color: #fff;
-  border: 2px solid #c1965f;
+  border: 2px solid #f2458e;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #c8a475 !important;
-  border-color: #c8a475 !important;
+  background: #f2458e !important;
+  border-color: #f2458e !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #c1965f;
-  border: 2px solid #c1965f;
+  color: #f2458e;
+  border: 2px solid #f2458e;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #c1965f;
+  background: #f2458e;
   color: #fff;
 }
 
@@ -1729,7 +1729,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #c1965f;
+  border-color: #f2458e;
 }
 
 .row-pb-md {
